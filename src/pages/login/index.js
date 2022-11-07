@@ -34,11 +34,11 @@ const Login = () => {
                       <Grid item>
                         <Stack alignItems="center" justifyContent="center" spacing={1}>
                           <Typography color={theme.palette.secondary.main} gutterBottom variant={matchDownSM ? 'h3' : 'h2'}>
-                            Hi, Welcome Back
+                            Hola, Bienvenido
                           </Typography>
-                          <Typography variant="caption" fontSize="16px" textAlign={matchDownSM ? 'center' : 'inherit'}>
+                          {/* <Typography variant="caption" fontSize="16px" textAlign={matchDownSM ? 'center' : 'inherit'}>
                             Enter your credentials to continue
-                          </Typography>
+                          </Typography> */}
                         </Stack>
                       </Grid>
                     </Grid>
@@ -46,7 +46,7 @@ const Login = () => {
                   <Grid item xs={12}>
                     <AuthLogin />
                   </Grid>
-                  <Grid item xs={12}>
+                  {/* <Grid item xs={12}>
                     <Divider />
                   </Grid>
                   <Grid item xs={12}>
@@ -55,7 +55,7 @@ const Login = () => {
                         Don&apos;t have an account?
                       </Typography>
                     </Grid>
-                  </Grid>
+                  </Grid> */}
                 </Grid>
               </AuthCardWrapper>
             </Grid>
