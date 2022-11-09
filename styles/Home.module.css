@@ -19,5 +19,33 @@
 .canvas {
   height: 100vh;
   width: 100%;
+
+  animation: verBack 30s cubic-bezier(0.165, 0.84, 0.44, 1) alternate;
+  }
+  
+  @keyframes verBack {
+    0% {
+      opacity: 0;
+      filter: blur(200px);
+    }
+  
+    25% {
+      opacity: .25;
+    }
+  
+    50% {
+      opacity: .5;
+      filter: blur(100PX);
+    }
+  
+    75% {
+      opacity: .75;
+    }
+  
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+
 }
 
