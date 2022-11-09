@@ -13,20 +13,6 @@ a {
 * {
   box-sizing: border-box;
 }
-#desktop {
-  display: none;
-}
-#movil {
-  display: inherit;
-}
-@media (min-width: 768px) {
-  #desktop {
-    display: inherit;
-  }
-  #movil {
-    display: none;
-  }
-}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
