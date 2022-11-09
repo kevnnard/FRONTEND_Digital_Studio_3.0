@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // initAudioPlayer2();
+    initAudioPlayer2();
   }, []);
   return (
     <div className={styles.container}>
