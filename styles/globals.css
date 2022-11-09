@@ -1,0 +1,66 @@
+html,
+body {
+  padding: 0 !important;
+  margin: 0;
+  font-family: 'Cascadia Code';
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+#desktop {
+  display: none;
+}
+#movil {
+  display: inherit;
+}
+@media (min-width: 768px) {
+  #desktop {
+    display: inherit;
+  }
+  #movil {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: rgba(250, 214, 165, .6);
+    animation: verBack 20s cubic-bezier(0.165, 0.84, 0.44, 1) alternate;
+    }
+    
+    @keyframes verBack {
+      0% {
+        opacity: 0;
+        filter: blur(200px);
+      }
+    
+      25% {
+        opacity: .25;
+      }
+    
+      50% {
+        opacity: .5;
+      }
+    
+      75% {
+        opacity: .75;
+      }
+    
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+
+  }
+
+
+}

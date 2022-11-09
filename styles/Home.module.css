@@ -1,0 +1,46 @@
+.container {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-image: url('/images/brand/logo1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20rem;
+}
+.title2 {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Cascadia Code';
+  color: rgb(0, 0, 0);
+}
+.canvas {
+  height: 100vh;
+  width: 100%;
+  animation: ver 5s linear 5s alternate;
+  }
+  @keyframes ver {
+    0% {
+      filter: blur(100px);
+    }
+  
+    25% {
+      opacity: .25;
+    }
+  
+    50% {
+      opacity: .5;
+    }
+  
+    75% {
+      opacity: .75;
+    }
+  
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
