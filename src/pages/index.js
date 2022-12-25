@@ -33,33 +33,31 @@ const SecondWrapper = styled('div')(({ theme }) => ({
 
 // =============================|| LANDING MAIN ||============================= //
 
-const Landing = () => {
-  return (
-    <Page title="Welcome">
-      <HeaderWrapper id="home">
-        <AppBar />
-        <Header />
-      </HeaderWrapper>
-      <SecondWrapper>
-        <Feature />
-      </SecondWrapper>
-      <SecondWrapper>
-        <Demos />
-      </SecondWrapper>
-      <SecondWrapper>
-        <Layouts />
-      </SecondWrapper>
-      <SecondWrapper>
-        <KeyFeature />
-      </SecondWrapper>
-      <SecondWrapper>
-        <Subscribe />
-      </SecondWrapper>
-      <Footer />
-      <Customization />
-    </Page>
-  );
-};
+const Landing = () => (
+  <Page title="Welcome">
+    <HeaderWrapper id="home">
+      <AppBar />
+      <Header />
+    </HeaderWrapper>
+    <SecondWrapper>
+      <Feature />
+    </SecondWrapper>
+    <SecondWrapper>
+      <Demos />
+    </SecondWrapper>
+    <SecondWrapper>
+      <Layouts />
+    </SecondWrapper>
+    <SecondWrapper>
+      <KeyFeature />
+    </SecondWrapper>
+    <SecondWrapper>
+      <Subscribe />
+    </SecondWrapper>
+    <Footer />
+    <Customization />
+  </Page>
+);
 
 Landing.getLayout = function getLayout(page) {
   return <Layout variant={LAYOUT.minimal}>{page}</Layout>;

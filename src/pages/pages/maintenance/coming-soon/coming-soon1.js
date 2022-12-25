@@ -18,17 +18,17 @@ import MailerSubscriber from 'components/maintenance/ComingSoon/ComingSoon1/Mail
 import { gridSpacing } from 'store/constant';
 
 // assets
-import { IconBrandDribbble } from '@tabler/icons';
+// import { IconBrandDribbble } from '@tabler/icons';
 
 import FiberManualRecordTwoToneIcon from '@mui/icons-material/FiberManualRecordTwoTone';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import BookIcon from '@mui/icons-material/Book';
+// import BookIcon from '@mui/icons-material/Book';
 
 const logo = '/assets/images/logo.svg';
 const logoDark = '/assets/images/logo-dark.svg';
-const companyLogo = '/assets/images/maintenance/img-ct-logo.png';
+// const companyLogo = '/assets/images/maintenance/img-ct-logo.png';
 const imageBackground = '/assets/images/maintenance/img-soon-bg.svg';
 const imageGrid = '/assets/images/maintenance/img-soon-bg-grid.svg';
 const imageDarkGrid = '/assets/images/maintenance/img-soon-bg-grid-dark.svg';

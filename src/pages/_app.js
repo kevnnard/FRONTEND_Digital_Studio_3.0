@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // global styles
 import PropTypes from 'prop-types';
 

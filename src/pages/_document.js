@@ -6,10 +6,7 @@ export default function Document() {
       <Head>
         <meta name="theme-color" content="#2296f3" />
         <meta name="title" content="Digital Studio® - Agencia de desarrollo web movil y marketing digital." />
-        <meta
-          name="description"
-          content="Digital Studio® - Agencia de desarrollo web movil y marketing digital."
-        />
+        <meta name="description" content="Digital Studio® - Agencia de desarrollo web movil y marketing digital." />
         <meta
           name="keywords"
           content="react admin template, material-ui react dashboard template, reactjs admin template, reactjs dashboard, react backend template"
