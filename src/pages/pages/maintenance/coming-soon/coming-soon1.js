@@ -146,9 +146,9 @@ const ComingSoon1 = () => {
 
   const { rtlLayout } = useConfig();
   const [open, setOpen] = React.useState(false);
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
   const images = [{ source: imageSlider1 }, { source: imageSlider2 }, { source: imageSlider3 }];
 
@@ -171,12 +171,12 @@ const ComingSoon1 = () => {
             />
             {theme.palette.mode === 'light' && (
               <div style={{ position: rtlLayout ? 'relative' : 'initial', top: rtlLayout ? 30 : 'initial' }}>
-                <Image src={logo} alt="Berry" width="100" height={35} />
+                <Image src="/assets/images/brand/logo2.png" alt="Digital Studio" width={180} height={35} />
               </div>
             )}
             {theme.palette.mode === 'dark' && (
               <div style={{ position: rtlLayout ? 'relative' : 'initial', top: rtlLayout ? 30 : 'initial' }}>
-                <Image src={logoDark} alt="Berry" width="100" height={35} />
+                <Image src="/assets/images/brand/logo1.png" alt="Digital Studio" width={180} height={35} />
               </div>
             )}
           </CardContent>
@@ -203,7 +203,7 @@ const ComingSoon1 = () => {
                 <Grid container spacing={gridSpacing}>
                   <Grid item xs={12}>
                     <Typography variant="h2" component="div" color="primary">
-                      Estaremos Disponibles pronto
+                      Suscribete y se el primero en enterarte
                     </Typography>
                   </Grid>
                   <Grid item xs={12}>
@@ -213,10 +213,20 @@ const ComingSoon1 = () => {
                           Digital Studio®
                         </Typography>
                       </Grid>
-                      <Grid item xs={12}>
-                        <Typography sx={{ fontSize: '1.125rem' }}>
-                          Presentamos nuestra agencia enfocada a el desarrollo de aplicaiones web, apps moviles y marketing digital para
-                          cualquier tipo de negocio (pequeño, mediano , grande)...
+                      <Grid item container columnGap={10} xs={12}>
+                        <Typography sx={{ fontSize: '1rem', paddingBottom: '1rem' }}>
+                          Nuestra aplicación web es una solución integral diseñada para satisfacer las necesidades de cualquier persona o
+                          empresa que busque gestionar de manera eficiente sus pedidos de ventas, clientes y negocios. Esta plataforma
+                          centraliza todas estas funciones en una sola aplicación, permitiendo un seguimiento y control óptimo de las
+                          operaciones comerciales. Además, nuestra aplicación es capaz de consumir APIs populares como WhatsApp y Amazon, lo
+                          que facilita una comunicación fluida y la integración con servicios externos.
+                        </Typography>
+                        <Typography sx={{ fontSize: '1rem', paddingBottom: '1rem' }}>
+                          También ofrece la programación de correos electrónicos para una comunicación automatizada y personalizada, la
+                          asignación de tareas para una mejor organización interna, y un chat interno empresarial que fomenta la
+                          colaboración y la comunicación efectiva entre los miembros del equipo. En resumen, nuestra aplicación web
+                          proporciona una solución completa y práctica para gestionar pedidos de ventas, clientes, negocios y centralizar
+                          todas estas funciones en un solo lugar.
                         </Typography>
                       </Grid>
                     </Grid>
@@ -226,7 +236,7 @@ const ComingSoon1 = () => {
                       <Grid item>
                         <Typography variant="h5" component="div" color="secondary" sx={{ display: 'flex', alignItems: 'center' }}>
                           <FiberManualRecordTwoToneIcon sx={{ mr: 0.625, fontSize: '1rem' }} />
-                          Flexible & Fast
+                          Flexible & Rapido
                         </Typography>
                       </Grid>
                       <Grid item>
@@ -238,7 +248,13 @@ const ComingSoon1 = () => {
                       <Grid item>
                         <Typography variant="h5" component="div" color="secondary" sx={{ display: 'flex', alignItems: 'center' }}>
                           <FiberManualRecordTwoToneIcon sx={{ mr: 0.625, fontSize: '1rem' }} />
-                          Javascript / Typescript
+                          Typescript / NextJS
+                        </Typography>
+                      </Grid>
+                      <Grid item>
+                        <Typography variant="h5" component="div" color="secondary" sx={{ display: 'flex', alignItems: 'center' }}>
+                          <FiberManualRecordTwoToneIcon sx={{ mr: 0.625, fontSize: '1rem' }} />
+                          GraphQL
                         </Typography>
                       </Grid>
                     </Grid>
@@ -262,7 +278,7 @@ const ComingSoon1 = () => {
                             overflow: 'hidden',
                             cursor: 'pointer'
                           }}
-                          // onClick={handleClickOpen}
+                          onClick={handleClickOpen}
                         >
                           <Slider />
                         </Link>
@@ -293,7 +309,7 @@ const ComingSoon1 = () => {
                                 </ButtonBase>
                               </Grid> */}
                               <Grid item>
-                                <ButtonBase component={Link} href="https://www.facebook.com" target="_blank">
+                                <ButtonBase component={Link} href="https://www.facebook.com/kevnnard-studio" target="_blank">
                                   <Avatar
                                     sx={{
                                       ...theme.typography.commonAvatar,
@@ -358,8 +374,8 @@ const ComingSoon1 = () => {
                                 </Typography>
                               </Grid>
                               <Grid item>
-                                Digital Studio®
-                                {/* <Image src={companyLogo} alt="Berry" width={128} height={27} /> */}
+                                Kevnnard®
+                                {/* <Image src="/assets/images/brand/icon2.png" alt="Studio Digital" width={50} height={27} /> */}
                               </Grid>
                             </Grid>
                           </Grid>

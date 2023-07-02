@@ -26,33 +26,54 @@ const MailerSubscriber = ({ ...others }) => {
         submit: null
       }}
       validationSchema={Yup.object().shape({
-        email: Yup.string().email('Must be a valid email').max(255).required('Email is required')
+        email: Yup.string().email('Must be a valid email').max(255).required('El Correo es requerido')
       })}
       onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
         try {
-          const options = {
-            headers: {
-              'content-type': 'application/json'
+          const { data } = await axios.post(
+            `${process.env.NEXT_PUBLIC_URL}/page/secret/subs/digital/studio`,
+            { email: values.email },
+            {
+              headers: {
+                'content-type': 'application/json'
+                // authorization:
+                //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjMzMzkwMjJ9.RTKCRJV-JlhJlKoLmqPVQ_Osces_VRhwD3S71xZbDOo'
+              }
             }
-          };
-          await axios.post('https://yourapicall', { email: values.email }, options);
-          dispatch(
-            openSnackbar({
-              open: true,
-              message: 'Success! Please check inbox and confirm.',
-              variant: 'alert',
-              alert: {
-                color: 'success'
-              },
-              close: false
-            })
           );
-
+          if (data) {
+            dispatch(
+              openSnackbar({
+                open: true,
+                message: `${data.confirm}`,
+                variant: 'alert',
+                alert: {
+                  color: 'success'
+                },
+                close: false
+              })
+            );
+          }
           if (scriptedRef.current) {
             setStatus({ success: true });
             setSubmitting(false);
           }
+          values.email = '';
+          values.submit = null;
         } catch (err) {
+          dispatch(
+            openSnackbar({
+              open: true,
+              message: `${err.response.data.confirm}`,
+              variant: 'alert',
+              alert: {
+                color: 'error'
+              },
+              close: false
+            })
+          );
+          values.email = '';
+          values.submit = null;
           if (scriptedRef.current) {
             setStatus({ success: false });
             setErrors({ submit: err.message });
@@ -66,7 +87,7 @@ const MailerSubscriber = ({ ...others }) => {
           <Grid container alignItems="center" spacing={gridSpacing}>
             <Grid item xs zeroMinWidth>
               <FormControl fullWidth error={Boolean(touched.email && errors.email)}>
-                <InputLabel htmlFor="outlined-adornment-email-forgot">Email Address</InputLabel>
+                <InputLabel htmlFor="outlined-adornment-email-forgot">Email -</InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-email-forgot"
                   type="email"
